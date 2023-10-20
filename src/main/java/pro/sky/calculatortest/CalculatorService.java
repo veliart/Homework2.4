@@ -1,17 +1,9 @@
 package pro.sky.calculatortest;
 
-import org.springframework.stereotype.Service;
-
-@Service
-public class CalculatorService {
-    public String startPage() {
-        return "Добро пожаловать в калькулятор";
-    }
-    public String addition(int num1, int num2) {
-        return (num1 + " + " + num2 + " = " + (num1 + num2));
-    }
-    public String subtraction(int num1, int num2) {
-        return (num1 + " - " + num2 + " = " + (num1 - num2));
-    }
-
+public interface CalculatorService {
+    String startPage();
+    String addition(int num1, int num2);
+    String subtraction(int num1, int num2);
+    String multiplication(int num1, int num2);
+    String division(double num1, double num2);
 }
